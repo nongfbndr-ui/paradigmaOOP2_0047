@@ -50,3 +50,28 @@ public:
     }
 };
 
+int main() {
+    RekeningBank* rekening;
+
+    RekeningSyariah syariah(5000000);
+    RekeningKonvensional konvensional(5000000);
+    RekeningPremium premium(8000000);
+
+    rekening = &syariah;
+    rekening->potongAdmin();
+    rekening->tampilSaldo();
+
+    cout << endl;
+
+    rekening = &konvensional;
+    rekening->potongAdmin();
+    rekening->tampilSaldo();
+
+    cout << endl;
+
+    rekening = &premium;
+    rekening->potongAdmin();
+    rekening->tampilSaldo();
+
+    return 0;
+}
