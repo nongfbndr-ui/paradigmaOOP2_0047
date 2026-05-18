@@ -26,3 +26,13 @@ public:
     }
 };
 
+class RekeningKonvensional : public RekeningBank {
+public:
+    RekeningKonvensional(double s) : RekeningBank(s) {}
+
+    void potongAdmin() {
+        saldo -= 15000;
+        cout << "Biaya admin Rp 15.000 dipotong" << endl;
+    }
+};
+
