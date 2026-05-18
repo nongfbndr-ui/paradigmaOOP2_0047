@@ -36,3 +36,17 @@ public:
     }
 };
 
+class RekeningPremium : public RekeningBank {
+public:
+    RekeningPremium(double s) : RekeningBank(s) {}
+
+    void potongAdmin() {
+        if (saldo > 10000000) {
+            cout << "Nasabah bebas biaya admin" << endl;
+        } else {
+            saldo -= 50000;
+            cout << "Biaya admin Rp 50.000 dipotong" << endl;
+        }
+    }
+};
+
